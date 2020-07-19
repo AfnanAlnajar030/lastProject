@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_one">
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:icon="@drawable/ic_baseline_home_24">
+
+    </item>
+    </group>
+    <group android:id="@+id/group_two">
+
+
+    <item
+        android:id="@+id/information"
+        android:title="@string/info"
+        android:icon="@drawable/ic_baseline_info_24">
+
+    </item>
+    </group>
+    <group android:id="@+id/group_three">
+    <item
+    android:id="@+id/profile"
+    android:title="@string/profile"
+    android:icon="@drawable/ic_baseline_person_24">
+
+</item>
+    </group>
+    <group android:id="@+id/group_four">
+        <item
+            android:id="@+id/mSettings"
+            android:title="@string/settings"
+            android:icon="@drawable/ic_baseline_settings_24">
+
+        </item>
+    </group>
+</menu>

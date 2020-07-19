@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/dl"
+    android:theme="@style/NavigationDrawerStyle"
+    >
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/proo"
+            app:civ_border_color="#000000"
+            app:civ_border_width="0dp"
+            android:scaleType="centerCrop"
+            android:elevation="7dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@id/uploadPhoto"
+            android:layout_marginBottom="60dp" />
+
+
+        <Button
+            android:id="@+id/uploadPhoto"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:text="رفع"
+            android:fontFamily="@font/tajawal_bold"
+            android:background="@drawable/green_square"
+            android:layout_alignBottom="@id/userName"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="160dp"
+            android:layout_marginLeft="30dp"/>
+        <Button
+            android:id="@+id/choosePhote"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:text="اختيار صورة"
+            android:fontFamily="@font/tajawal_bold"
+            android:background="@drawable/green_square"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_alignBottom="@id/userName"
+            android:layout_marginBottom="60dp"/>
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/farm_first"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="-10dp"
+            android:layout_marginLeft="-10dp"
+            android:onClick="handleImageClick"/>
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_alignBottom="@id/email"
+            android:hint="اسم المستخدم"
+            android:layout_alignLeft="@id/email"
+            android:background="@drawable/white_square"
+            android:layout_marginBottom="60dp"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/white_square"
+            android:hint="البريد الإلكتروني"
+            android:textAlignment="center"
+            android:layout_marginTop="340dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:background="@drawable/white_square"
+            android:layout_alignTop="@id/email"
+            android:textAlignment="center"
+            android:hint="كلمه السر"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"/>
+        <EditText
+            android:id="@+id/passwordTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:background="@drawable/white_square"
+            android:layout_alignTop="@id/password"
+            android:textAlignment="center"
+            android:hint="كلمه السر"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/signIn"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:text="تسجيل الدخول"
+            android:fontFamily="@font/tajawal_black"
+            android:background="@drawable/green_square"
+            android:layout_alignTop="@id/passwordTwo"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="70dp"/>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:text="تسجيل"
+            android:fontFamily="@font/tajawal_bold"
+            android:background="@drawable/green_square"
+            android:layout_alignTop="@id/signIn"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/black_box"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/black_square"
+            android:scaleType="centerCrop"
+            android:layout_alignLeft="@id/progressBar"
+            android:layout_alignBottom="@id/progressBar"
+            android:layout_marginBottom="-70dp"
+            android:layout_marginLeft="-70dp"
+            android:alpha="0.6"
+            android:elevation="5dp"
+            android:visibility="invisible"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="60dp"
+            android:layout_centerInParent="true"
+            android:layout_height="60dp"
+            android:backgroundTint="#000000"
+            android:elevation="6dp"
+            android:visibility="invisible"/>
+
+
+
+    </RelativeLayout>
+</FrameLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity = "start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigatio_menu"
+        android:background="#7AF48D"/>
+</androidx.drawerlayout.widget.DrawerLayout>
